@@ -8,10 +8,6 @@ import {
 	MenuButton,
 	MenuList,
 	MenuItem,
-	MenuItemOption,
-	MenuGroup,
-	MenuOptionGroup,
-	MenuDivider,
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
@@ -31,7 +27,7 @@ const Navbar = () => {
 						src='https://cleanergy.com.ar/wp-content/uploads/2016/07/logo512pxspa.png'
 						alt='Logo Cleanergy'
 						objectFit='cover'
-						boxSize={'50%'}
+						width={"15em"}
 						cursor={'pointer'}
 					/>
 				</Link>
@@ -39,7 +35,7 @@ const Navbar = () => {
 			<Box>
 				<ButtonGroup spacing={4} flexDirection={'row'}>
 					<Link href={'/nosotros'}>
-						<Button color={'brand.secundario'} variant={'ghost'}>
+						<Button color={'brand.primario'} variant={'ghost'}>
 							¿Quienes somos?
 						</Button>
 					</Link>
@@ -47,7 +43,7 @@ const Navbar = () => {
 						<MenuButton
 							as={Button}
 							rightIcon={<ChevronDownIcon color={"brand.primario"}/>}
-							color={'brand.secundario'}
+							color={'brand.primario'}
 							variant={'ghost'}
 						>
 							Nuestros Servicios
@@ -65,7 +61,7 @@ const Navbar = () => {
 						<MenuButton
 							as={Button}
 							rightIcon={<ChevronDownIcon color={"brand.primario"}/>}
-							color={'brand.secundario'}
+							color={'brand.primario'}
 							variant={'ghost'}
 						>
 							Nuestros Clientes
@@ -80,7 +76,7 @@ const Navbar = () => {
 						</MenuList>
 					</Menu>
 					<Link href={'/3CBiogas'}>
-						<Button color={'brand.secundario'} variant={'ghost'}>
+						<Button color={'brand.primario'} variant={'ghost'}>
 							3C Biogás
 						</Button>
 					</Link>

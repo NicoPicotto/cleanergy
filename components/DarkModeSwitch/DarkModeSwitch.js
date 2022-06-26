@@ -11,7 +11,7 @@ const DarkModeSwitch = () => {
 				icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
 				onClick={toggleColorMode}
 				variant={'ghost'}
-				color={'brand.primario'}
+				color={'brand.secundario'}
 			/>
 		</Tooltip>
 	);
