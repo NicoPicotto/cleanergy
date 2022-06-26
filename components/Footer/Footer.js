@@ -6,7 +6,11 @@ import {
 	Image,
 	Box,
 	useColorMode,
+	Input,
+	Textarea,
 } from '@chakra-ui/react';
+
+import { AiFillHome, AiFillClockCircle, AiFillPhone } from 'react-icons/ai';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -17,8 +21,11 @@ const Footer = () => {
 			<Flex
 				bgColor={colorMode === 'dark' ? 'gray.600' : 'gray.200'}
 				height={'25vh'}
-				padding={10}
-				justifyContent={'space-between'}
+				paddingTop={5}
+				paddingBottom={5}
+				paddingRight={10}
+				paddingLeft={10}
+				justifyContent={'space-around'}
 			>
 				<Box
 					borderRadius={10}
@@ -28,19 +35,34 @@ const Footer = () => {
 					padding={2}
 				>
 					<Image
-						src='https://cleanergy.com.ar/wp-content/uploads/2016/07/logo512pxspa.png'
+						src='/logo.png'
 						alt='Logo Cleanergy'
 						objectFit='cover'
 						width={'15em'}
 						cursor={'pointer'}
 						filter={colorMode === 'dark' && 'brightness(0) invert(1)'}
-                        marginBottom={3}
+						marginBottom={3}
 					/>
-					<Text as={'i'}>
-						Es un hecho establecido hace demasiado tiempo que un lector se
-						distraerá con el contenido del texto de un sitio mientras que mira
-						su diseño.
-					</Text>
+					<Stack padding={2}>
+						<Flex flexDirection={'row'} alignItems={'center'}>
+							<AiFillHome color={'#2F855A'} />
+							<Text as={'ai'} fontSize={'xs'} marginLeft={1}>
+								Bv. Buenos Aires 817 General Cabrera, Córdoba
+							</Text>
+						</Flex>
+						<Flex flexDirection={'row'} alignItems={'center'}>
+							<AiFillClockCircle color={'#2F855A'} />
+							<Text as={'ai'} fontSize={'xs'} marginLeft={1}>
+								Lunes a viernes 8:30 a 12:130 y de 16 a 20.
+							</Text>
+						</Flex>
+						<Flex flexDirection={'row'} alignItems={'center'}>
+							<AiFillPhone color={'#2F855A'} />
+							<Text as={'ai'} fontSize={'xs'} marginLeft={1}>
+								+549 358 411-4120
+							</Text>
+						</Flex>
+					</Stack>
 				</Box>
 				<Flex flexDirection={'row'}>
 					<Stack
@@ -71,9 +93,37 @@ const Footer = () => {
 						<Button variant={'link'}> Proyecto 3C Biogás</Button>
 					</Stack>
 				</Flex>
-				<Box width={'30%'}></Box>
+				<Box width={'30%'} padding={5}>
+					<Text marginBottom={2} fontWeight={"bold"} color={"brand.terciario"} >Esperamos tu mensaje</Text>
+					<Flex
+						flexDirection={'row'}
+						justifyContent={'space-between'}
+						marginBottom={2}
+					>
+						<Input
+							placeholder='Nombre'
+							variant='filled'
+							_hover={'none'}
+							width={'49%'}
+						/>
+						<Input
+							placeholder='Email'
+							variant='filled'
+							_hover={'none'}
+							width={'49%'}
+						/>
+					</Flex>
+					<Flex>
+						<Textarea placeholder='Mensaje' variant='filled' _hover={'none'} />
+					</Flex>
+				</Box>
 			</Flex>
-			<Flex height={'5vh'} alignItems={'center'} justifyContent={'center'} bgColor={colorMode === "dark" ? null : "brand.primario"}>
+			<Flex
+				height={'5vh'}
+				alignItems={'center'}
+				justifyContent={'center'}
+				bgColor={colorMode === 'dark' ? null : 'brand.primario'}
+			>
 				<Text fontSize={12} color={'white'}>
 					© {currentYear} Cleanergy - All rights reserved.{' '}
 				</Text>

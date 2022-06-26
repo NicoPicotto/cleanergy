@@ -1,9 +1,9 @@
-import Navbar from '../components/NavBar/Navbar';
+import MainLanding from '../components/MainLanding/MainLanding';
 
 const Home = () => {
 	return (
 		<>
-      <h1>Index</h1>
+      <MainLanding />
 		</>
 	);
 };

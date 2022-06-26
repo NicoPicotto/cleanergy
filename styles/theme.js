@@ -5,6 +5,7 @@ const colors = {
 	brand: {
 		primario: '#3182CE',
 		secundario: '#2F855A',
+        terciario: "#A0AEC0"
 	},
 };
 

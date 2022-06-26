@@ -24,7 +24,7 @@ const Navbar = () => {
 			<Box>
 				<Link href={'/'}>
 					<Image
-						src='https://cleanergy.com.ar/wp-content/uploads/2016/07/logo512pxspa.png'
+						src='/logo.png'
 						alt='Logo Cleanergy'
 						objectFit='cover'
 						width={"15em"}
