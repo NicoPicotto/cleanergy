@@ -1,20 +1,32 @@
-import { Flex, Image, Heading, ButtonGroup, Button, Text } from '@chakra-ui/react';
+import {
+	Flex,
+	Image,
+	Heading,
+	ButtonGroup,
+	Button,
+	Text,
+	useColorMode
+} from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 const MainLanding = () => {
+
+	const { colorMode } = useColorMode();
+
 	return (
 		<>
-			<Flex justifyContent={'space-between'} alignItems={'center'}>
+			<Flex alignItems={'center'} bgImage='/landing.jpg' height={"65vh"} bgRepeat={"no-repeat"} backgroundAttachment={"fixed"} bgSize={"contain"} >
 				<Flex
 					justifyContent={'center'}
-					width={'50vw'}
+					width={'40vw'}
 					flexDirection={'column'}
 					padding={15}
-					bgColor={'white'}
+					backdropBlur={"xl"}
 					borderRadius={20}
 					marginRight={-20}
-					zIndex={100}
 					marginLeft={40}
-                    boxShadow={"lg"}
+					backdropFilter={"auto"}
+					bgColor={colorMode === "dark" ? "#1a202c" : "white"}
+					boxShadow='lg'
 				>
 					<Heading color={'brand.secundario'} padding={3}>
 						Creamos economías circulares
@@ -33,15 +45,14 @@ const MainLanding = () => {
 						<Button variant={'outline'}>Contactate</Button>
 					</ButtonGroup>
 				</Flex>
-				<Flex alignItems={'center'}>
+				{/* <Flex alignItems={'center'} width={'100vw'} position={"relative"} borderColor={"red"} borderWidth={1}>
 					<Image
 						src='/landing.jpg'
 						objectFit='cover'
-						width={'70vw'}
 						alt='Territorio con energías renovables'
-                        borderLeftRadius={20}
+						borderLeftRadius={20}
 					/>
-				</Flex>
+				</Flex> */}
 			</Flex>
 		</>
 	);
