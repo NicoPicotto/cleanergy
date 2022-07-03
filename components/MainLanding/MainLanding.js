@@ -1,6 +1,5 @@
 import {
 	Flex,
-	Image,
 	Heading,
 	ButtonGroup,
 	Button,
@@ -45,14 +44,6 @@ const MainLanding = () => {
 						<Button variant={'outline'}>Contactate</Button>
 					</ButtonGroup>
 				</Flex>
-				{/* <Flex alignItems={'center'} width={'100vw'} position={"relative"} borderColor={"red"} borderWidth={1}>
-					<Image
-						src='/landing.jpg'
-						objectFit='cover'
-						alt='Territorio con energías renovables'
-						borderLeftRadius={20}
-					/>
-				</Flex> */}
 			</Flex>
 		</>
 	);
