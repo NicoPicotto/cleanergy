@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 
 import { AiFillHome, AiFillClockCircle, AiFillPhone } from 'react-icons/ai';
+import { EmailIcon } from '@chakra-ui/icons';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
@@ -20,12 +21,9 @@ const Footer = () => {
 		<>
 			<Flex
 				bgColor={colorMode === 'dark' ? 'gray.600' : 'gray.200'}
-				height={'25vh'}
-				paddingTop={5}
-				paddingBottom={5}
-				paddingRight={10}
-				paddingLeft={10}
+				padding={10}
 				justifyContent={'space-around'}
+				flexWrap={"wrap"}
 			>
 				<Box
 					borderRadius={10}
@@ -94,7 +92,9 @@ const Footer = () => {
 					</Stack>
 				</Flex>
 				<Box width={'30%'} padding={5}>
-					<Text marginBottom={2} fontWeight={"bold"} color={"brand.terciario"} >Esperamos tu mensaje</Text>
+					<Text marginBottom={2} fontWeight={'bold'} color={'brand.terciario'}>
+						Esperamos tu mensaje
+					</Text>
 					<Flex
 						flexDirection={'row'}
 						justifyContent={'space-between'}
@@ -113,9 +113,14 @@ const Footer = () => {
 							width={'49%'}
 						/>
 					</Flex>
-					<Flex>
+					<Flex marginBottom={2}>
 						<Textarea placeholder='Mensaje' variant='filled' _hover={'none'} />
 					</Flex>
+					<Button
+						width={'fit-content'}
+						colorScheme={'green'}
+						rightIcon={<EmailIcon />}
+					>Enviar</Button>
 				</Box>
 			</Flex>
 			<Flex

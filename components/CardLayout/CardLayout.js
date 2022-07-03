@@ -4,11 +4,10 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 const CardLayout = () => {
 	return (
 		<Flex
-			width={'100vw'}
-			height={'30vw'}
 			alignItems={'center'}
 			padding={20}
 			justifyContent={'space-evenly'}
+			flexWrap={'wrap'}
 		>
 			<ServiceCard
 				imageSrc={

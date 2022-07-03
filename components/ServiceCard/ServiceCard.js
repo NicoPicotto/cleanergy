@@ -37,7 +37,7 @@ const ServiceCard = ({ imageSrc, title, text, goTo }) => {
 			<Stack padding={5}>
 				<Heading color={'brand.secundario'}>{title}</Heading>
 				<Divider color={'brand.primario'} />
-				<Text>{text}</Text>
+				<Text color={"brand.terciario"}>{text}</Text>
 				<Button
 					width={'fit-content'}
 					colorScheme={'green'}

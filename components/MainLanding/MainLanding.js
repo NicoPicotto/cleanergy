@@ -13,7 +13,7 @@ const MainLanding = () => {
 
 	return (
 		<>
-			<Flex alignItems={'center'} bgImage='/landing.jpg' height={"65vh"} bgRepeat={"no-repeat"} backgroundAttachment={"fixed"} bgSize={"contain"} >
+			<Flex alignItems={'center'} bgImage='/landing.jpg' height={"70vh"} bgRepeat={"no-repeat"} backgroundAttachment={"fixed"} bgSize={"cover"} backgroundPosition={"center top"} >
 				<Flex
 					justifyContent={'center'}
 					width={'40vw'}
@@ -27,10 +27,10 @@ const MainLanding = () => {
 					bgColor={colorMode === "dark" ? "#1a202c" : "white"}
 					boxShadow='lg'
 				>
-					<Heading color={'brand.secundario'} padding={3}>
+					<Heading size={"lg"} color={'brand.secundario'} padding={3}>
 						Creamos economías circulares
 					</Heading>
-					<Text fontSize='xl' color={'brand.terciario'} padding={3} as={'i'}>
+					<Text fontSize='lg' color={'brand.terciario'} padding={3} as={'i'}>
 						Utilizando residuos como recursos que crean valor para la comunidad,
 						la industria y el medio ambiente.
 					</Text>
