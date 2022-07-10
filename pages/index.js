@@ -6,10 +6,10 @@ import NumbersLayout from '../components/NumbersLayout/NumbersLayout';
 const Home = () => {
 	return (
 		<>
-      <MainLanding />
-	  <CardLayout />
-	  <NumbersLayout />
-	  <ClientsLayout />
+			<MainLanding />
+			<CardLayout />
+			<NumbersLayout />
+			<ClientsLayout />
 		</>
 	);
 };

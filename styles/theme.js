@@ -9,6 +9,13 @@ const colors = {
 	},
 };
 
-const theme = extendTheme({ colors });
+const fonts = {
+	fonts: {
+		open: `'Open Sans', sans-serif`,
+		raleway: `'Raleway', sans-serif`,
+	  },
+}
+
+const theme = extendTheme({ colors, fonts });
 
 export default theme;

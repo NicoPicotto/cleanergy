@@ -23,7 +23,9 @@ const Footer = () => {
 				bgColor={colorMode === 'dark' ? 'gray.600' : 'gray.200'}
 				padding={10}
 				justifyContent={'space-around'}
-				flexWrap={"wrap"}
+				flexWrap={'wrap'}
+				id='footer'
+				fontFamily={"fonts.open"}
 			>
 				<Box
 					borderRadius={10}
@@ -120,7 +122,9 @@ const Footer = () => {
 						width={'fit-content'}
 						colorScheme={'green'}
 						rightIcon={<EmailIcon />}
-					>Enviar</Button>
+					>
+						Enviar
+					</Button>
 				</Box>
 			</Flex>
 			<Flex
@@ -129,7 +133,7 @@ const Footer = () => {
 				justifyContent={'center'}
 				bgColor={colorMode === 'dark' ? null : 'brand.primario'}
 			>
-				<Text fontSize={12} color={'white'}>
+				<Text fontSize={12} color={'white'} fontFamily={"fonts.open"}>
 					© {currentYear} Cleanergy - All rights reserved.{' '}
 				</Text>
 			</Flex>

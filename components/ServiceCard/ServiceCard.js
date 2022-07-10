@@ -26,6 +26,7 @@ const ServiceCard = ({ imageSrc, title, text, goTo }) => {
             borderColor={colorMode === "dark" && "brand.secundario"}
             borderWidth={colorMode === "dark" && 1}
             overflow={"hidden"}
+			fontFamily={"fonts.open"}
 		>
 			<Box height={'60%'} width={'100%'}>
 				<Image
@@ -35,7 +36,7 @@ const ServiceCard = ({ imageSrc, title, text, goTo }) => {
 				/>
 			</Box>
 			<Stack padding={5}>
-				<Heading color={'brand.secundario'}>{title}</Heading>
+				<Heading color={'brand.secundario'} fontFamily={"fonts.open"}>{title}</Heading>
 				<Divider color={'brand.primario'} />
 				<Text color={"brand.terciario"}>{text}</Text>
 				<Button

@@ -14,6 +14,7 @@ const NumbersLayout = () => {
 			justifyContent={'space-evenly'}
 			flexWrap={'wrap'}
 			bgColor={colorMode === 'dark' ? 'gray.600' : 'brand.primario'}
+			fontFamily={"fonts.open"}
             
 		>
 			<CardNumber
