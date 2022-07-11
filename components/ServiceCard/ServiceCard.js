@@ -27,6 +27,7 @@ const ServiceCard = ({ imageSrc, title, text, goTo }) => {
             borderWidth={colorMode === "dark" && 1}
             overflow={"hidden"}
 			fontFamily={"fonts.open"}
+			margin={10}
 		>
 			<Box height={'60%'} width={'100%'}>
 				<Image

@@ -8,31 +8,47 @@ import {
 	useColorMode,
 	Input,
 	Textarea,
+	Heading,
 } from '@chakra-ui/react';
-
+import react, { useState, useEffect } from 'react';
 import { AiFillHome, AiFillClockCircle, AiFillPhone } from 'react-icons/ai';
 import { EmailIcon } from '@chakra-ui/icons';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 	const { colorMode } = useColorMode();
+	const [isMobile, setIsMobile] = useState(false);
+
+	//Screen Size para mobile
+	const handleResize = () => {
+		if (window.innerWidth < 1100) {
+			setIsMobile(true);
+		} else {
+			setIsMobile(false);
+		}
+	};
+
+	// Event Listener para screen
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+	});
 
 	return (
 		<>
 			<Flex
 				bgColor={colorMode === 'dark' ? 'gray.600' : 'gray.200'}
-				padding={10}
-				justifyContent={'space-around'}
+				padding={isMobile ? 5 : 10}
+				justifyContent={isMobile ? 'center' : 'space-around'}
 				flexWrap={'wrap'}
 				id='footer'
-				fontFamily={"fonts.open"}
+				fontFamily={'fonts.open'}
 			>
-				<Box
-					borderRadius={10}
-					justifyContent={'center'}
+				<Flex
+					alignItems={isMobile ? 'center' : 'left'}
 					height={'fit-content'}
-					width={'25%'}
+					width={isMobile ? '100%' : '30%'}
 					padding={2}
+					flexDirection={'column'}
 				>
 					<Image
 						src='/logo.png'
@@ -63,37 +79,33 @@ const Footer = () => {
 							</Text>
 						</Flex>
 					</Stack>
-				</Box>
-				<Flex flexDirection={'row'}>
-					<Stack
-						flexDirection={'column'}
-						spacing={5}
-						alignItems={'flex-start'}
-						padding={5}
-					>
-						<Button variant={'link'}> Nosotros</Button>
-						<Button variant={'link'}> Servicios Biogás</Button>
-						<Button variant={'link'}> Servicios Solar</Button>
-					</Stack>
-					<Stack
-						flexDirection={'column'}
-						spacing={5}
-						alignItems={'flex-start'}
-						padding={5}
-					>
-						<Button variant={'link'}> Clientes Biogás</Button>
-						<Button variant={'link'}> Clientes Solar</Button>
-					</Stack>
-					<Stack
-						flexDirection={'column'}
-						spacing={5}
-						alignItems={'flex-start'}
-						padding={5}
-					>
-						<Button variant={'link'}> Proyecto 3C Biogás</Button>
-					</Stack>
 				</Flex>
-				<Box width={'30%'} padding={5}>
+				{isMobile ? null : (
+					<Flex flexDirection={'row'} width={'30%'}>
+						<Stack
+							flexDirection={'column'}
+							spacing={5}
+							alignItems={'flex-start'}
+							padding={5}
+						>
+							<Button variant={'link'}> Nosotros</Button>
+							<Button variant={'link'}> Servicios Biogás</Button>
+							<Button variant={'link'}> Servicios Solar</Button>
+						</Stack>
+						<Stack
+							flexDirection={'column'}
+							spacing={5}
+							alignItems={'flex-start'}
+							padding={5}
+						>
+							<Button variant={'link'}> Clientes Biogás</Button>
+							<Button variant={'link'}> Clientes Solar</Button>
+							<Button variant={'link'}> Proyecto 3C Biogás</Button>
+						</Stack>
+					</Flex>
+				)}
+
+				<Box width={isMobile ? '100%' : '30%'} padding={5}>
 					<Text marginBottom={2} fontWeight={'bold'} color={'brand.terciario'}>
 						Esperamos tu mensaje
 					</Text>
@@ -133,7 +145,7 @@ const Footer = () => {
 				justifyContent={'center'}
 				bgColor={colorMode === 'dark' ? null : 'brand.primario'}
 			>
-				<Text fontSize={12} color={'white'} fontFamily={"fonts.open"}>
+				<Text fontSize={12} color={'white'} fontFamily={'fonts.open'}>
 					© {currentYear} Cleanergy - All rights reserved.{' '}
 				</Text>
 			</Flex>

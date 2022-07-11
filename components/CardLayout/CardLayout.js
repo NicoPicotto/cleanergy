@@ -5,7 +5,7 @@ const CardLayout = () => {
 	return (
 		<Flex
 			alignItems={'center'}
-			padding={20}
+
 			justifyContent={'space-evenly'}
 			flexWrap={'wrap'}
 		>
