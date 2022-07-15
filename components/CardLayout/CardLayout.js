@@ -5,9 +5,9 @@ const CardLayout = () => {
 	return (
 		<Flex
 			alignItems={'center'}
-
 			justifyContent={'space-evenly'}
 			flexWrap={'wrap'}
+			padding={5}
 		>
 			<ServiceCard
 				imageSrc={
