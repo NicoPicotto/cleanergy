@@ -19,7 +19,7 @@ const CardLayout = () => {
 			/>
 			<ServiceCard
 				imageSrc={
-					'/assets/solart.JPG'
+					'/assets/solart.jpg'
 				}
 				title='Solar Térmico'
 				text="Te brindamos diferentes alternativas para que aproveches la energía térmica para calentar fluidos, agua caliente sanitaria (ACS), piscinas, y calefacción de ambientes."
