@@ -4,25 +4,41 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 const CardLayout = () => {
 	return (
 		<Flex
-			alignItems={'center'}
+			alignItems={'flex-start'}
 			justifyContent={'space-evenly'}
 			flexWrap={'wrap'}
 			padding={5}
 		>
 			<ServiceCard
 				imageSrc={
-					'https://noticias.uai.cl/assets/uploads/2021/11/portadas-notas-web-1-980x470-c-default.png'
+					'/assets/biogas.JPG'
 				}
-				title='Servicios de Biogás'
-				text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+				title='Biogás'
+				text="Ofrecemos soluciones y servicios end-to-end para productores agropecuarios, municipios, e inversores y desarrolladores privados"
 				goTo='/serviciosBiogas'
 			/>
 			<ServiceCard
 				imageSrc={
-					'https://lmg-labmanager.s3.amazonaws.com/assets/articleNo/27906/aImg/50600/converting-solar-energy-to-electricity-on-demand-l.jpg'
+					'/assets/solart.JPG'
 				}
-				title='Servicios de Solar'
-				text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+				title='Solar Térmico'
+				text="Te brindamos diferentes alternativas para que aproveches la energía térmica para calentar fluidos, agua caliente sanitaria (ACS), piscinas, y calefacción de ambientes."
+				goTo='/serviciosBiogas'
+			/>
+			<ServiceCard
+				imageSrc={
+					'/assets/solarfv.JPG'
+				}
+				title='Solar Fotovoltáico'
+				text="Dimensionamiento e instalación de sistemas fotovoltaicos llave en mano, te asesoráramos para que puedas instalar tu sistema fotovoltaico de acuerdo a tus necesidades."
+				goTo='/serviciosBiogas'
+			/>
+			<ServiceCard
+				imageSrc={
+					'assets/residuos.jpeg'
+				}
+				title='Gestión de residuos'
+				text="Ofrecemos un servicio integral de gestión de residuos orgánicos para grandes generadores de residuos y municipios."
 				goTo='/serviciosSolar'
 			/>
 		</Flex>

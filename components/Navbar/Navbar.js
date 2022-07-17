@@ -15,7 +15,7 @@ import {
 	useColorMode,
 } from '@chakra-ui/react';
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons';
-import react, { useState, useEffect} from 'react';
+import react, { useState, useEffect } from 'react';
 import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
 import Link from 'next/link';
 
@@ -64,7 +64,7 @@ const Navbar = () => {
 			</Box>
 			{isMobile === true ? (
 				<>
-					<Button  onClick={onOpen}>
+					<Button onClick={onOpen}>
 						<HamburgerIcon color={'brand.primario'} />
 					</Button>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
 										variant={'ghost'}
 										onClick={onClose}
 									>
-										¿Quienes somos?
+										Nosotros
 									</Button>
 								</Link>
 								<Link href={'/serviciosBiogas'}>
@@ -146,7 +146,7 @@ const Navbar = () => {
 					<ButtonGroup spacing={4} flexDirection={'row'}>
 						<Link href={'/nosotros'}>
 							<Button color={'brand.primario'} variant={'ghost'}>
-								¿Quienes somos?
+								Nosotros
 							</Button>
 						</Link>
 						<Menu>
@@ -156,14 +156,20 @@ const Navbar = () => {
 								color={'brand.primario'}
 								variant={'ghost'}
 							>
-								Nuestros Servicios
+								Servicios
 							</MenuButton>
 							<MenuList>
 								<Link href={'/serviciosBiogas'}>
 									<MenuItem color={'brand.primario'}>Biogás</MenuItem>
 								</Link>
 								<Link href={'/serviciosSolar'}>
-									<MenuItem color={'brand.primario'}>Solar</MenuItem>
+									<MenuItem color={'brand.primario'}>Solar Térmico</MenuItem>
+								</Link>
+								<Link href={'/serviciosSolar'}>
+									<MenuItem color={'brand.primario'}>Solar Fotovoltáico</MenuItem>
+								</Link>
+								<Link href={'/serviciosSolar'}>
+									<MenuItem color={'brand.primario'}>Gestión de residuos</MenuItem>
 								</Link>
 							</MenuList>
 						</Menu>
@@ -174,14 +180,17 @@ const Navbar = () => {
 								color={'brand.primario'}
 								variant={'ghost'}
 							>
-								Nuestros Clientes
+								Tableros de indicadores
 							</MenuButton>
 							<MenuList>
 								<Link href={'/clientesBiogas'}>
 									<MenuItem color={'brand.primario'}>Biogás</MenuItem>
 								</Link>
 								<Link href={'/clientesSolar'}>
-									<MenuItem color={'brand.primario'}>Solar</MenuItem>
+									<MenuItem color={'brand.primario'}>Solar Térmico</MenuItem>
+								</Link>
+								<Link href={'/clientesSolar'}>
+									<MenuItem color={'brand.primario'}>Solar Fotovoltáico</MenuItem>
 								</Link>
 							</MenuList>
 						</Menu>

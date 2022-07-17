@@ -8,7 +8,7 @@ import {
 	useColorMode,
 	Input,
 	Textarea,
-	Heading,
+	Divider,
 } from '@chakra-ui/react';
 import react, { useState, useEffect } from 'react';
 import { AiFillHome, AiFillClockCircle, AiFillPhone } from 'react-icons/ai';
@@ -38,7 +38,7 @@ const Footer = () => {
 			<Flex
 				bgColor={colorMode === 'dark' ? 'gray.600' : 'gray.200'}
 				padding={isMobile ? 5 : 10}
-				justifyContent={isMobile ? 'center' : 'space-around'}
+				justifyContent={isMobile ? 'center' : 'space-between'}
 				flexWrap={'wrap'}
 				id='footer'
 				fontFamily={'fonts.open'}
@@ -46,7 +46,7 @@ const Footer = () => {
 				<Flex
 					alignItems={isMobile ? 'center' : 'left'}
 					height={'fit-content'}
-					width={isMobile ? '100%' : '30%'}
+					width={isMobile ? '100%' : '20%'}
 					padding={2}
 					flexDirection={'column'}
 				>
@@ -81,34 +81,57 @@ const Footer = () => {
 					</Stack>
 				</Flex>
 				{isMobile ? null : (
-					<Flex flexDirection={'row'} width={'30%'}>
-						<Stack
-							flexDirection={'column'}
-							spacing={5}
-							alignItems={'flex-start'}
-							padding={5}
+					<Box padding={5}>
+						<Text
+							marginBottom={2}
+							fontWeight={'bold'}
+							color={'brand.terciario'}
 						>
-							<Button variant={'link'}> Nosotros</Button>
-							<Button variant={'link'}> Servicios Biogás</Button>
-							<Button variant={'link'}> Servicios Solar</Button>
-						</Stack>
-						<Stack
-							flexDirection={'column'}
-							spacing={5}
-							alignItems={'flex-start'}
-							padding={5}
-						>
-							<Button variant={'link'}> Clientes Biogás</Button>
-							<Button variant={'link'}> Clientes Solar</Button>
-							<Button variant={'link'}> Proyecto 3C Biogás</Button>
-						</Stack>
-					</Flex>
+							Mapa del sitio
+						</Text>
+						<Divider color={'brand.primario'} marginBottom={2} />
+						<Flex flexDirection={'row'}>
+							<Stack
+								flexDirection={'column'}
+								spacing={4}
+								alignItems={'flex-start'}
+								marginRight={10}
+							>
+								<Button size={'md'} variant={'link'}>
+									{' '}
+									Nosotros
+								</Button>
+								<Button variant={'link'}> 3C Biogás</Button>
+							</Stack>
+							<Stack
+								flexDirection={'column'}
+								spacing={4}
+								alignItems={'flex-start'}
+								marginRight={10}
+							>
+								<Button variant={'link'}>Servicio Biogás</Button>
+								<Button variant={'link'}>Servicio Solar Térmico</Button>
+								<Button variant={'link'}>Servicio Solar Fotovoltáico</Button>
+								<Button variant={'link'}> Gestión de residuos</Button>
+							</Stack>
+							<Stack
+								flexDirection={'column'}
+								spacing={4}
+								alignItems={'flex-start'}
+							>
+								<Button variant={'link'}> Tableros Biogás</Button>
+								<Button variant={'link'}> Tableros Solar Térmico</Button>
+								<Button variant={'link'}> Tableros Solar Fotovoltáico</Button>
+							</Stack>
+						</Flex>
+					</Box>
 				)}
 
 				<Box width={isMobile ? '100%' : '30%'} padding={5}>
 					<Text marginBottom={2} fontWeight={'bold'} color={'brand.terciario'}>
 						Esperamos tu mensaje
 					</Text>
+					<Divider color={'brand.primario'} marginBottom={2} />
 					<Flex
 						flexDirection={'row'}
 						justifyContent={'space-between'}
