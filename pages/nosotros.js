@@ -5,8 +5,8 @@ import {
 	Heading,
 	Text,
 } from '@chakra-ui/react';
-import react, { useState, useEffect } from 'react';
-const nosotros = () => {
+import { useState, useEffect } from 'react';
+const Nosotros = () => {
 
 	const [isMobile, setIsMobile] = useState(false);
 
@@ -65,4 +65,4 @@ const nosotros = () => {
 	);
 };
 
-export default nosotros;
+export default Nosotros;
