@@ -15,8 +15,6 @@ const ClientsLayout = () => {
             <ClientCard scrImage={"logo-placeholder.png"} name="Cuatro"/>
             <ClientCard scrImage={"logo-placeholder.png"} name="Empresa Uno"/>
             <ClientCard scrImage={"logo-placeholder.png"} name="Empresa Dos"/>
-            <ClientCard scrImage={"logo-placeholder.png"} name="Empresa Tres"/>
-            <ClientCard scrImage={"logo-placeholder.png"} name="Cuatro"/>
         </Flex>
 	);
 };

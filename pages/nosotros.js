@@ -1,46 +1,55 @@
 import {
 	Flex,
 	Image,
-	useColorMode,
 	Divider,
 	Heading,
 	Text,
+	useColorMode,
 } from '@chakra-ui/react';
+import react, { useState, useEffect } from 'react';
 const nosotros = () => {
+
+	const { colorMode } = useColorMode();
+	const [isMobile, setIsMobile] = useState(false);
+
+	//Screen Size para mobile
+	const handleResize = () => {
+		if (window.innerWidth < 1100) {
+			setIsMobile(true);
+		} else {
+			setIsMobile(false);
+		}
+	};
+
+	// Event Listener para screen
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+	});
+
 	return (
-		<Flex alignItems={'center'}>
+		<Flex alignItems={'center'} flexDir={isMobile && "column"} padding={10} justifyContent={"center"}>
 			<Flex
-				height={'70vh'}
-				width={'20vw'}
-				bgColor={'brand.primario'}
-				marginRight={-100}
-				borderRightRadius={20}
-			></Flex>
-			<Flex
-				height={'50vh'}
-				marginLeft={-100}
-				boxShadow={'md'}
-				borderRadius={20}
+				width={'40vw'}
+				height={"fit-content"}
 			>
 				<Image src={'/assets/about.jpg'} borderRadius={20} boxShadow={'md'} />
 			</Flex>
 			<Flex
-				height={'50vh'}
+				width={'40vw'}
 				marginLeft={10}
-				width={'35vw'}
 				flexDir={'column'}
 				ali
 			>
 				<Heading
-					size={'3xl'}
+					fontSize={'2em'}
 					color={'brand.primario'}
-					fontFamily={'fonts.open'}
+			
 				>
-					Nosotros
+					CLEANERGY RENOVABLES S.A.
 				</Heading>
 				<Divider orientation='horizontal' marginTop={3} marginBottom={3} />
-				<Text fontFamily={'fonts.open'}>
-					CLEANERGY RENOVABLES S.A. nace en 2016 con la misión de crear
+				<Text fontSize={'1em'}>
+					La empresa nace en 2016 con la misión de crear
 					economías circulares, ayudando a generar valor a municipios,
 					industrias y la comunidad mediante sistemas de generación de energía a
 					partir de residuos orgánicos. Creemos que la incorporación de nuevas

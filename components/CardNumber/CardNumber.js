@@ -2,7 +2,7 @@ import { Box, Heading, Stack, Text, Flex } from '@chakra-ui/react';
 
 const CardNumber = ({ icon, number, text, unidad }) => {
 	return (
-		<Box padding={5}>
+		<Box padding={10}>
 			<Stack
 				alignItems={'center'}
 				color={'white'}

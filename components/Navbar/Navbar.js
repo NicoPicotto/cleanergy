@@ -81,6 +81,7 @@ const Navbar = () => {
 								alignItems={'center'}
 								flexDirection={'column'}
 								size={'lg'}
+								padding={5}
 							>
 								<Link href={'/nosotros'}>
 									<Button

@@ -1,13 +1,32 @@
 import { Flex } from '@chakra-ui/react';
 import ServiceCard from '../ServiceCard/ServiceCard';
+import react, { useState, useEffect } from 'react';
 
 const CardLayout = () => {
+	const [isMobile, setIsMobile] = useState(false);
+	
+	//Screen Size para mobile
+	const handleResize = () => {
+		if (window.innerWidth < 1100) {
+			setIsMobile(true);
+		} else {
+			setIsMobile(false);
+		}
+	};
+
+	// Event Listener para screen
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+	});
+
 	return (
 		<Flex
 			alignItems={'flex-start'}
 			justifyContent={'space-evenly'}
 			flexWrap={'wrap'}
-			padding={5}
+			
+			padding={10}
+			flexDir={isMobile && "column"}
 		>
 			<ServiceCard
 				imageSrc={

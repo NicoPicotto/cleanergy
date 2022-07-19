@@ -5,6 +5,7 @@ import {
 	Button,
 	Text,
 	useColorMode,
+	Divider,
 } from '@chakra-ui/react';
 import react, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -69,21 +70,14 @@ const MainLanding = () => {
 				>
 					<Flex
 						justifyContent={'center'}
-						width={'40vw'}
 						flexDirection={'column'}
 						padding={15}
-						backdropBlur={'xl'}
-						borderRadius={20}
-						marginRight={-20}
-						marginLeft={40}
-						backdropFilter={'auto'}
-						bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
-						boxShadow='lg'
+						marginLeft={20}
 					>
 						<Heading
-							size={'lg'}
-							color={'brand.secundario'}
-							padding={3}
+							size={'3xl'}
+							color={'white'}
+							padding={2}
 							fontFamily={'fonts.open'}
 						>
 							Creamos economías circulares
@@ -96,11 +90,10 @@ const MainLanding = () => {
 							size={'lg'}
 							padding={3}
 							spacing={5}
-							colorScheme={'green'}
 						>
-							<Button rightIcon={<ChevronRightIcon />}>Descubrí más</Button>
+							<Button color={"brand.primario"} rightIcon={<ChevronRightIcon />}>Descubrí más</Button>
 							<Link href='#footer'>
-								<Button variant={'outline'}>Contactate</Button>
+								<Button color={"brand.primario"} variant={'outline'}>Contactate</Button>
 							</Link>
 						</ButtonGroup>
 					</Flex>
