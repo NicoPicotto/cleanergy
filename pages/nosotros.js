@@ -4,12 +4,10 @@ import {
 	Divider,
 	Heading,
 	Text,
-	useColorMode,
 } from '@chakra-ui/react';
 import react, { useState, useEffect } from 'react';
 const nosotros = () => {
 
-	const { colorMode } = useColorMode();
 	const [isMobile, setIsMobile] = useState(false);
 
 	//Screen Size para mobile
