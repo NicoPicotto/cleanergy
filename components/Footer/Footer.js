@@ -41,7 +41,7 @@ const Footer = () => {
 				justifyContent={isMobile ? 'center' : 'space-between'}
 				flexWrap={'wrap'}
 				id='footer'
-				fontFamily={'fonts.open'}
+				
 			>
 				<Flex
 					alignItems={isMobile ? 'center' : 'left'}
@@ -168,7 +168,7 @@ const Footer = () => {
 				justifyContent={'center'}
 				bgColor={colorMode === 'dark' ? null : 'brand.primario'}
 			>
-				<Text fontSize={12} color={'white'} fontFamily={'fonts.open'}>
+				<Text fontSize={12} color={'white'}>
 					© {currentYear} Cleanergy - All rights reserved.{' '}
 				</Text>
 			</Flex>

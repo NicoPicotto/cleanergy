@@ -43,7 +43,6 @@ const ServiceCard = ({ imageSrc, title, text, goTo }) => {
 			borderColor={colorMode === 'dark' && 'brand.secundario'}
 			borderWidth={colorMode === 'dark' && 1}
 			overflow={'hidden'}
-			fontFamily={'fonts.open'}
 			marginTop={10}
 			marginBottom={10}
 		>
@@ -51,11 +50,7 @@ const ServiceCard = ({ imageSrc, title, text, goTo }) => {
 				<Image src={imageSrc} alt='Imagen del Servicio' height={'30%'} />
 			</Box>
 			<Stack padding={5}>
-				<Heading
-					color={'brand.secundario'}
-					fontFamily={'fonts.open'}
-					fontSize={'1.5em'}
-				>
+				<Heading color={'brand.secundario'} fontSize={'1.5em'}>
 					{title}
 				</Heading>
 				<Divider color={'brand.primario'} />

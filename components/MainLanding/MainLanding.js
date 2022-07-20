@@ -36,7 +36,6 @@ const MainLanding = () => {
 						size={'lg'}
 						color={'brand.secundario'}
 						padding={3}
-						fontFamily={'fonts.open'}
 						textAlign={"center"}
 					>
 						Creamos economías circulares
@@ -66,7 +65,6 @@ const MainLanding = () => {
 					backgroundAttachment={'fixed'}
 					bgSize={'cover'}
 					backgroundPosition={'center top'}
-					fontFamily={'fonts.open'}
 				>
 					<Flex
 						justifyContent={'center'}
@@ -78,7 +76,6 @@ const MainLanding = () => {
 							size={'3xl'}
 							color={'white'}
 							padding={2}
-							fontFamily={'fonts.open'}
 						>
 							Creamos economías circulares
 						</Heading>

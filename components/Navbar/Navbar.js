@@ -45,7 +45,7 @@ const Navbar = () => {
 			alignItems={'center'}
 			justifyContent={'space-between'}
 			padding={10}
-			fontFamily={'fonts.open'}
+			
 			pos={'sticky'}
 			top={0}
 			bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}

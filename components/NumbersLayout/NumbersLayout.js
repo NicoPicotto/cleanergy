@@ -13,9 +13,7 @@ const NumbersLayout = () => {
 			padding={20}
 			justifyContent={'space-evenly'}
 			flexWrap={'wrap'}
-			bgColor={colorMode === 'dark' ? 'gray.600' : 'brand.primario'}
-			fontFamily={"fonts.open"}
-            
+			bgColor={colorMode === 'dark' ? 'gray.600' : 'brand.primario'}           
 		>
 			<CardNumber
 				icon={<BsFillTrashFill size={50} />}

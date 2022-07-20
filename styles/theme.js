@@ -16,6 +16,6 @@ const fonts = {
 	  },
 }
 
-const theme = extendTheme({ colors, fonts });
+const theme = extendTheme({ colors, fonts:{body: "Raleway"} });
 
 export default theme;
