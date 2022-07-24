@@ -10,6 +10,7 @@ const ProyectosAbout = ({isMobile}) => {
 					color={'brand.secundario'}
 					noOfLines={1}
 					padding={2}
+					size={isMobile ? "md" : "lg"}
 				>
 					Proyectos en Argentina
 				</Heading>

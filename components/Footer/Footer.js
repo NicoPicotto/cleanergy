@@ -9,29 +9,15 @@ import {
 	Input,
 	Textarea,
 	Divider,
+	useMediaQuery
 } from '@chakra-ui/react';
-import react, { useState, useEffect } from 'react';
 import { AiFillHome, AiFillClockCircle, AiFillPhone } from 'react-icons/ai';
 import { EmailIcon } from '@chakra-ui/icons';
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 	const { colorMode } = useColorMode();
-	const [isMobile, setIsMobile] = useState(false);
-
-	//Screen Size para mobile
-	const handleResize = () => {
-		if (window.innerWidth < 1100) {
-			setIsMobile(true);
-		} else {
-			setIsMobile(false);
-		}
-	};
-
-	// Event Listener para screen
-	useEffect(() => {
-		window.addEventListener('resize', handleResize);
-	});
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	return (
 		<>

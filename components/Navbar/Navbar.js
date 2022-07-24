@@ -13,31 +13,18 @@ import {
 	DrawerOverlay,
 	DrawerContent,
 	useColorMode,
+	useMediaQuery,
 } from '@chakra-ui/react';
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons';
-import react, { useState, useEffect } from 'react';
+import react, { useState } from 'react';
 import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
 import Link from 'next/link';
 
 const Navbar = () => {
-	const [isMobile, setIsMobile] = useState(false);
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [placement, setPlacement] = useState('top');
 	const { colorMode } = useColorMode();
-
-	//Screen Size para mobile
-	const handleResize = () => {
-		if (window.innerWidth < 1100) {
-			setIsMobile(true);
-		} else {
-			setIsMobile(false);
-		}
-	};
-
-	// Event Listener para screen
-	useEffect(() => {
-		window.addEventListener('resize', handleResize);
-	});
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	return (
 		<Flex
@@ -45,7 +32,6 @@ const Navbar = () => {
 			alignItems={'center'}
 			justifyContent={'space-between'}
 			padding={10}
-			
 			pos={'sticky'}
 			top={0}
 			bgColor={colorMode === 'dark' ? '#1a202c' : 'white'}
@@ -167,10 +153,14 @@ const Navbar = () => {
 									<MenuItem color={'brand.primario'}>Solar Térmico</MenuItem>
 								</Link>
 								<Link href={'/serviciosSolar'}>
-									<MenuItem color={'brand.primario'}>Solar Fotovoltáico</MenuItem>
+									<MenuItem color={'brand.primario'}>
+										Solar Fotovoltáico
+									</MenuItem>
 								</Link>
 								<Link href={'/serviciosSolar'}>
-									<MenuItem color={'brand.primario'}>Gestión de residuos</MenuItem>
+									<MenuItem color={'brand.primario'}>
+										Gestión de residuos
+									</MenuItem>
 								</Link>
 							</MenuList>
 						</Menu>
@@ -191,7 +181,9 @@ const Navbar = () => {
 									<MenuItem color={'brand.primario'}>Solar Térmico</MenuItem>
 								</Link>
 								<Link href={'/clientesSolar'}>
-									<MenuItem color={'brand.primario'}>Solar Fotovoltáico</MenuItem>
+									<MenuItem color={'brand.primario'}>
+										Solar Fotovoltáico
+									</MenuItem>
 								</Link>
 							</MenuList>
 						</Menu>

@@ -9,29 +9,15 @@ import {
 	Button,
 	Image,
 	useColorMode,
+	useMediaQuery
 } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
-import react, { useState, useEffect } from 'react';
 
 const ServiceCard = ({ imageSrc, title, text, goTo }) => {
 	const { colorMode } = useColorMode();
 
-	const [isMobile, setIsMobile] = useState(false);
-
-	//Screen Size para mobile
-	const handleResize = () => {
-		if (window.innerWidth < 1100) {
-			setIsMobile(true);
-		} else {
-			setIsMobile(false);
-		}
-	};
-
-	// Event Listener para screen
-	useEffect(() => {
-		window.addEventListener('resize', handleResize);
-	});
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	return (
 		<Box
@@ -43,8 +29,8 @@ const ServiceCard = ({ imageSrc, title, text, goTo }) => {
 			borderColor={colorMode === 'dark' && 'brand.secundario'}
 			borderWidth={colorMode === 'dark' && 1}
 			overflow={'hidden'}
-			marginTop={10}
-			marginBottom={10}
+			marginTop={5}
+			marginBottom={5}
 		>
 			<Box overflow={'hidden'}>
 				<Image src={imageSrc} alt='Imagen del Servicio' height={'30%'} />

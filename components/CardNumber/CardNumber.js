@@ -12,7 +12,7 @@ const CardNumber = ({ icon, number, text, unidad }) => {
 					<Heading>{number}</Heading>
 					<Text>{unidad}</Text>
 				</Flex>
-				<Text>{text}</Text>
+				<Text textAlign={"center"}>{text}</Text>
 			</Stack>
 		</Box>
 	);

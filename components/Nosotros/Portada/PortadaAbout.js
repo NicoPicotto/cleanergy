@@ -1,6 +1,9 @@
-import { Flex, Image, Divider, Heading, Text } from '@chakra-ui/react';
+import { Flex, Image, Divider, Heading, Text, useMediaQuery } from '@chakra-ui/react';
 
-const PortadaAbout = ({isMobile}) => {
+const PortadaAbout = () => {
+
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
+
 	return (
 		<Flex
 			alignItems={'center'}
@@ -13,11 +16,11 @@ const PortadaAbout = ({isMobile}) => {
 			</Flex>
 			<Flex
 				width={isMobile ? '100%' : '40vw'}
-				marginLeft={10}
+				marginLeft={isMobile ? 0 : 10}
 				flexDir={'column'}
 				marginTop={isMobile && 5}
 			>
-				<Heading fontSize={'2em'} color={'brand.primario'}>
+				<Heading size={isMobile ? "md" : "lg"} color={'brand.primario'}>
 					CLEANERGY RENOVABLES S.A.
 				</Heading>
 				<Divider orientation='horizontal' marginTop={3} marginBottom={3} borderColor={"brand.terciario"}/>
