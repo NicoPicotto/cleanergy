@@ -1,7 +1,15 @@
-import { Flex, Text, Divider, Heading, Highlight } from '@chakra-ui/react';
+import {
+	Flex,
+	Text,
+	Divider,
+	Heading,
+	Highlight,
+	SlideFade,
+} from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 const ServiceBiogas = () => {
+
 	return (
 		<Flex justifyContent={'center'}>
 			<Flex width={'70vw'} flexDir={'column'} padding={10}>
@@ -106,16 +114,18 @@ const ServiceBiogas = () => {
 								(cambios de filtros, aceites, bujías, limpieza en general).
 							</Text>
 						</Flex>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>
-								Owner’s Engineering y optimización de proyectos existentes.
-							</Text>
-						</Flex>
+						<SlideFade offsetX='20px'>
+							<Flex padding={5} alignItems={'center'}>
+								<ArrowForwardIcon
+									marginRight={3}
+									color={'brand.primario'}
+									fontSize={'1.5em'}
+								/>
+								<Text fontFamily={'fonts.open'}>
+									Owner’s Engineering y optimización de proyectos existentes.
+								</Text>
+							</Flex>
+						</SlideFade>
 					</Flex>
 				</Flex>
 				<Text>
