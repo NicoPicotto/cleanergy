@@ -1,7 +1,7 @@
-import CardLayout from '../components/CardLayout/CardLayout';
-import ClientsLayout from '../components/ClientsLayout/ClientsLayout';
-import MainLanding from '../components/MainLanding/MainLanding';
-import NumbersLayout from '../components/NumbersLayout/NumbersLayout';
+import CardLayout from '../components/Home/CardLayout/CardLayout';
+import ClientsLayout from '../components/Home/ClientsLayout/ClientsLayout';
+import MainLanding from '../components/Home/MainLanding/MainLanding';
+import NumbersLayout from '../components/Home/NumbersLayout/NumbersLayout';
 
 const Home = () => {
 	return (

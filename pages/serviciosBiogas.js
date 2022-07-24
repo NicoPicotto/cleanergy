@@ -1,6 +1,12 @@
+import ServiceBiogas from '../components/Servicios/Biogas/ServiceBiogas'
+import ServicesLayout from '../components/Servicios/ServicesLayout'
+
 const serviciosBiogas = () => {
   return (
-    <h1>serviciosBiogas</h1>
+    <>
+    <ServicesLayout bgImage="/assets/serviceBiogasPortada.JPG" title="Biogás"/>
+    <ServiceBiogas />
+    </>
   )
 }
 
