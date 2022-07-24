@@ -1,15 +1,8 @@
-import {
-	Flex,
-	Text,
-	Divider,
-	Heading,
-	Highlight,
-	SlideFade,
-} from '@chakra-ui/react';
+import { Flex, Text, Divider, Heading, SlideFade } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const ServiceBiogas = () => {
-
 	return (
 		<Flex justifyContent={'center'}>
 			<Flex width={'70vw'} flexDir={'column'} padding={10}>
@@ -28,104 +21,163 @@ const ServiceBiogas = () => {
 						borderColor={'brand.secundario'}
 					/>
 					<Flex flexDir={'column'}>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>
-								Desarrollo temprano de proyectos: concepción, búsqueda y
-								análisis de oportunidades y riesgos, y prefactibilidad
-								técnico-económica.
-							</Text>
-						</Flex>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>
-								Diseño e ingeniería: Conceptual, básica y de detalle.
-							</Text>
-						</Flex>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>Provisión de tecnología.</Text>
-						</Flex>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>
-								Gestión Integral de proyecto: Desde el presupuesto y análisis de
-								proveedores y contratistas, hasta la supervisión de la
-								construcción, asistencia y coordinación en gestión de permisos y
-								habilitaciones.
-							</Text>
-						</Flex>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>
-								EPC: Ingeniería, procura y construcción.
-							</Text>
-						</Flex>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>Puesta en marcha biológica.</Text>
-						</Flex>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>
-								Operación de plantas en actividad: Gestión logística de
-								transportistas de residuos, monitoreo fisicoquímico y biológico
-								diario, supervisión de operarios de planta, implementación de
-								sistemas de gestión, búsqueda de sustratos alternativos.
-							</Text>
-						</Flex>
-						<Flex padding={5} alignItems={'center'}>
-							<ArrowForwardIcon
-								marginRight={3}
-								color={'brand.primario'}
-								fontSize={'1.5em'}
-							/>
-							<Text fontFamily={'fonts.open'}>
-								Mantenimiento de plantas en actividad: electromecánico del
-								equipamiento de planta, y mantenimientos básicos de CHPs
-								(cambios de filtros, aceites, bujías, limpieza en general).
-							</Text>
-						</Flex>
-						<SlideFade offsetX='20px'>
-							<Flex padding={5} alignItems={'center'}>
-								<ArrowForwardIcon
-									marginRight={3}
-									color={'brand.primario'}
-									fontSize={'1.5em'}
-								/>
-								<Text fontFamily={'fonts.open'}>
-									Owner’s Engineering y optimización de proyectos existentes.
-								</Text>
-							</Flex>
-						</SlideFade>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											Desarrollo temprano de proyectos: concepción, búsqueda y
+											análisis de oportunidades y riesgos, y prefactibilidad
+											técnico-económica.
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											Diseño e ingeniería: Conceptual, básica y de detalle.
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											Provisión de tecnología.
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											Gestión Integral de proyecto: Desde el presupuesto y
+											análisis de proveedores y contratistas, hasta la
+											supervisión de la construcción, asistencia y coordinación
+											en gestión de permisos y habilitaciones.
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											EPC: Ingeniería, procura y construcción.
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											Puesta en marcha biológica.
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											Operación de plantas en actividad: Gestión logística de
+											transportistas de residuos, monitoreo fisicoquímico y
+											biológico diario, supervisión de operarios de planta,
+											implementación de sistemas de gestión, búsqueda de
+											sustratos alternativos.
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											Mantenimiento de plantas en actividad: electromecánico del
+											equipamiento de planta, y mantenimientos básicos de CHPs
+											(cambios de filtros, aceites, bujías, limpieza en
+											general).
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
+						<VisibilitySensor offset={{ bottom: 100 }} partialVisibility={true}>
+							{({ isVisible }) => (
+								<SlideFade in={isVisible} offsetX='-30px'>
+									<Flex padding={5} alignItems={'center'}>
+										<ArrowForwardIcon
+											marginRight={3}
+											color={'brand.primario'}
+											fontSize={'1.5em'}
+										/>
+										<Text fontFamily={'fonts.open'}>
+											Owner’s Engineering y optimización de proyectos
+											existentes.
+										</Text>
+									</Flex>
+								</SlideFade>
+							)}
+						</VisibilitySensor>
 					</Flex>
 				</Flex>
 				<Text>
