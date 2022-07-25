@@ -1,19 +1,35 @@
-import { Flex, Text, Divider, Heading, SlideFade } from '@chakra-ui/react';
+import {
+	Flex,
+	Text,
+	Divider,
+	Heading,
+	SlideFade,
+	useMediaQuery,
+	useColorMode
+} from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 import VisibilitySensor from 'react-visibility-sensor';
 
 const ServiceBiogas = () => {
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
+	const { colorMode } = useColorMode();
+
 	return (
 		<Flex justifyContent={'center'}>
-			<Flex width={'70vw'} flexDir={'column'} padding={10}>
-				<Heading
-					color={'brand.secundario'}
-					size={'lg'}
-					fontFamily={'fonts.open'}
-				>
-					Ofrecemos soluciones y servicios end-to-end para productores
-					agropecuarios, municipios, e inversores y desarrolladores privados:
-				</Heading>
+			<Flex width={'90vw'} flexDir={'column'}>
+				<Flex w={'90vw'} padding={5} flexDir={'column'}>
+					<Heading
+						fontFamily={'fonts.open'}
+						color={'brand.secundario'}
+						padding={2}
+						size={isMobile ? 'md' : 'lg'}
+					>
+						Ofrecemos soluciones y servicios end-to-end para productores
+						agropecuarios, municipios, e inversores y desarrolladores privados:
+					</Heading>
+					<Divider borderColor={'brand.terciario'} padding={2} />
+				</Flex>
+
 				<Flex>
 					<Divider
 						orientation='vertical'
@@ -182,7 +198,7 @@ const ServiceBiogas = () => {
 				</Flex>
 				<Text>
 					<Flex marginTop={10}>
-						<Text as={'i'} fontFamily={'fonts.open'}>
+						<Text as={'i'} fontFamily={'fonts.open'}marginBottom={10} bgColor={"brand.secundario"} padding={5} color={colorMode === 'dark' ? '#1a202c' : 'white'}>
 							A diferencia de otros proveedores de tecnología, CLEANERGY ejecuta
 							las tareas con equipos de ingenieros propios, y con una fuerte
 							presencia y experiencia local. De esta manera, es posible ejecutar

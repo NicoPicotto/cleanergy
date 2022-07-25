@@ -1,45 +1,36 @@
-import { Flex, Image, Divider, Heading, Text, useMediaQuery } from '@chakra-ui/react';
+import { Flex, Divider, Heading, useMediaQuery } from '@chakra-ui/react';
 
-const PortadaAbout = () => {
+const PortadaAbout = ({bgImage, title}) => {
 
 	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	return (
+		<Flex>
 		<Flex
-			alignItems={'center'}
-			flexDir={isMobile && 'column'}
-			padding={10}
-			justifyContent={'center'}
+			bgImage={bgImage}
+			width={'100vw'}
+			height={isMobile ? '40vh' : '50vh'}
+			bgRepeat={'no-repeat'}
+			backgroundAttachment={isMobile ? null : 'fixed'}
+			bgSize={'cover'}
+			backgroundPosition={'center top'}
 		>
-			<Flex width={isMobile ? '100%' : '40vw'} height={'fit-content'}>
-				<Image src={'/assets/about.jpg'} borderRadius={20} boxShadow={'md'} />
-			</Flex>
-			<Flex
-				width={isMobile ? '100%' : '40vw'}
-				marginLeft={isMobile ? 0 : 10}
-				flexDir={'column'}
-				marginTop={isMobile && 5}
-			>
-				<Heading size={isMobile ? "md" : "lg"} color={'brand.primario'}>
-					CLEANERGY RENOVABLES S.A.
-				</Heading>
-				<Divider orientation='horizontal' marginTop={3} marginBottom={3} borderColor={"brand.terciario"}/>
-				<Text fontSize={'1em'}>
-					La empresa nace en 2016 con la misión de crear economías circulares,
-					ayudando a generar valor a municipios, industrias y la comunidad
-					mediante sistemas de generación de energía a partir de residuos
-					orgánicos. Creemos que la incorporación de nuevas tecnologías a los
-					emprendimientos productivos, especialmente en la industria
-					agroalimentaria, cambiará la manera de hacer negocios en Argentina y
-					la región, adoptando prácticas más eficientes, y a la vez más
-					sustentables. Es por eso que trabajamos junto a productores
-					agropecuarios e industriales para aprovechar un recurso valioso, que
-					hoy está desaprovechado, generando negocios más rentables, con menor
-					riesgo, y amigables con el medio ambiente y la comunidad en la que
-					trabaja.
-				</Text>
+			<Flex alignItems={'center'} width={'100vw'} justifyContent={'center'}>
+			
+				<Flex width={'70vw'} padding={10} alignItems={"center"} gap={2} justifyContent={isMobile && "center"}>
+				<Divider orientation='vertical' h={"5em"} borderWidth={2}/>
+					<Heading
+						color={'white'}
+						size={'4xl'}
+						textShadow={'2px 2px 4px #000000'}
+						fontFamily={'fonts.open'}
+					>
+						{title}
+					</Heading>
+				</Flex>
 			</Flex>
 		</Flex>
+	</Flex>
 	);
 };
 

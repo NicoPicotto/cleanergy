@@ -44,7 +44,7 @@ const ProyectoItems = ({ title, text }) => {
 					bgColor={colorMode === "dark" ? "#1a202c" : 'white'}
 					pb={4}
 					fontFamily={'fonts.open'}
-					fontSize={'lg'}
+					
 				>
 					{text}
 				</AccordionPanel>

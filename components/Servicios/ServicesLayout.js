@@ -15,7 +15,8 @@ const ServicesLayout = ({ bgImage, title }) => {
 				backgroundPosition={'center top'}
 			>
 				<Flex alignItems={'center'} width={'100vw'} justifyContent={'center'}>
-					<Flex width={'70vw'} padding={10}>
+					<Flex width={'70vw'} padding={10} alignItems={"center"} gap={2} justifyContent={isMobile && "center"}>
+					<Divider orientation='vertical' h={"5em"} borderWidth={2}/>
 						<Heading
 							color={'white'}
 							size={'4xl'}

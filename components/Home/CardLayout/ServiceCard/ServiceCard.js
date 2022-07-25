@@ -33,7 +33,7 @@ const ServiceCard = ({ imageSrc, title, text, goTo }) => {
 			marginBottom={5}
 		>
 			<Box overflow={'hidden'}>
-				<Image src={imageSrc} alt='Imagen del Servicio' height={'30%'} />
+				<Image src={imageSrc} alt='Imagen del Servicio' width={"100%"} />
 			</Box>
 			<Stack padding={5}>
 				<Heading color={'brand.secundario'} fontSize={'1.5em'}>
